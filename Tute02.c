@@ -9,7 +9,7 @@ Write a program to calculate the amount to be paid for a rented vehicle.
 
 e.g.
 
-Distance -> 20
+Distance -> 30
 Amount = 20 x 50 = 1000
 
 
@@ -19,6 +19,20 @@ Amount = 30 x 50 + (50-30) x 40 = 2300*/
 #include <stdio.h>
 
 int main() {
-  
+  int distance, amount;
+
+  printf("Enter distance :");
+  scanf("%d", &distance);
+
+  if(distance <= 30)
+  {
+    amount = distance * 50;
+    printf("Amount is :%d", amount);
+  }
+  else if(distance > 30)
+  {
+    amount = 30 * 50 + (distance - 30) * 40;
+    printf("Amount is :%d", amount);
+  }
   return 0;
 }
